@@ -30,7 +30,6 @@ namespace _1WomanVPN
                 process.Start();
                 MessageBox.Show("You have connected to 1Woman server using UDP");
             }
-            else if (comboBox1.Text == "1Woman Server" && radioButton2.Checked)
             {
                 Process process = new Process();
                 ProcessStartInfo startInfo = new ProcessStartInfo();
@@ -75,13 +74,12 @@ namespace _1WomanVPN
             Process.Start(new ProcessStartInfo
             {
                 FileName = "taskkill",
-                Arguments = $"/f /im openvpn.exe",
                 CreateNoWindow = true,
                 UseShellExecute = false
             }).WaitForExit();
 
         }
-        
+
 
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
